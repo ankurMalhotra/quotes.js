@@ -6,11 +6,10 @@
     var Quotes = {
         options: {
             sleep: 2, // seconds
-            repeat: false
+            repeat: false,
+            selector: '',
         },
-        phrases: [
-
-        ]
+        phrases: []
     };
 
     var prefix = '[Quotes.js]';
@@ -25,14 +24,14 @@
     };
 
     Quotes.start = function(phrases, options) {
-        if (typeof phrases !== 'object' || !phrases.length)
-            this.error('You should pass a list of valid phrases containing the quotes you want to display!');
-
         var invalidSelector = (typeof options.selector !== 'string' || !options.selector.length);
         
         if (invalidSelector || null === document.querySelector(options.selector)) 
             this.error('Please, use a valid selector.');
-        
+
+        if (typeof phrases !== 'object' || !phrases.length)
+            this.error('You should pass a list of valid phrases containing the quotes you want to display!');
+
         Quotes.phrases = phrases;
         Quotes.options = merge(options, Quotes.options);
     };
@@ -40,7 +39,7 @@
     function merge(options, defaults) {
         Object.keys(options).forEach(function(key){
             var value = options[key];
-            if (defaults[key])
+            if (key in defaults)
                 defaults[key] = value;
         });
 

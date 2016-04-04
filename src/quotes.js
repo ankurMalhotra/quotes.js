@@ -23,11 +23,9 @@
 
     Quotes.start = function(quotes, options) {
         if (typeof quotes !== 'object' || !quotes.length)
-            this.error('You must enter a valid object of citations!');
+            this.error('You must enter a valid object of quotes!');
 
         Quotes.options = merge(options, Quotes.options);
-
-        console.log(Quotes.options);
     };
 
     function merge(options, defaults) {

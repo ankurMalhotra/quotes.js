@@ -60,14 +60,13 @@
     };
 
     Quotes.play = function() {
-        var self = this,
-            selector = self.options.selector;
+        var self = this;
 
-        var element = document.querySelector(selector);
+        var element = document.querySelector(self.options.selector);
 
         setInterval(function(){
             var active = element.querySelector('.active');
-            
+
             active.style.display = 'none';
             active.className = '';
 

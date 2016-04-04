@@ -7,7 +7,10 @@
         options: {
             sleep: 2, // seconds
             repeat: false
-        }
+        },
+        phrases: [
+
+        ]
     };
 
     var prefix = '[Quotes.js]';
@@ -21,10 +24,11 @@
             console.warn(prefix + ': ' + message);
     };
 
-    Quotes.start = function(quotes, options) {
-        if (typeof quotes !== 'object' || !quotes.length)
-            this.error('You must enter a valid object of quotes!');
+    Quotes.start = function(phrases, options) {
+        if (typeof phrases !== 'object' || !phrases.length)
+            this.error('You should pass a list of valid phrases containing the quotes you want to display!');
 
+        Quotes.phrases = phrases;
         Quotes.options = merge(options, Quotes.options);
     };
 

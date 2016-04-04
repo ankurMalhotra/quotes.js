@@ -34,6 +34,52 @@
 
         Quotes.phrases = phrases;
         Quotes.options = merge(options, Quotes.options);
+
+        Quotes.init();
+
+    };
+
+    Quotes.init = function() {
+        this.createList();
+        this.play();
+    };
+
+    Quotes.createList = function() {
+        var self = this,
+            element = document.querySelector(self.options.selector);
+
+        self.phrases.forEach(function(value){
+            var li = document.createElement('li');
+            li.innerHTML = value;
+            li.style.display = 'none';
+            element.appendChild(li);
+        });
+        
+        element.firstChild.style.display = 'block';
+        element.firstChild.className = 'active';
+    };
+
+    Quotes.play = function() {
+        var self = this,
+            selector = self.options.selector;
+
+        var element = document.querySelector(selector);
+
+        setInterval(function(){
+            var active = element.querySelector('.active');
+            
+            active.style.display = 'none';
+            active.className = '';
+
+            if (null === active.nextSibling)
+                next = element.firstChild;
+            else
+                next = active.nextSibling;
+
+            next.style.display = 'block';
+            next.className = 'active';
+
+        }, (this.options.sleep * 1000));
     };
 
     function merge(options, defaults) {

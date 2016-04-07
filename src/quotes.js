@@ -5,9 +5,13 @@
 (function(window){
     var Quotes = {
         options: {
-            sleep: 2, // seconds
+            sleep: 4, // seconds
             repeat: false,
             selector: '',
+            listType: 'unordered',
+            listClass: '',
+            listItemClass: '',
+            itemActiceClassName: ''
         },
         phrases: []
     };
@@ -44,11 +48,27 @@
         this.play();
     };
 
+    Quotes.listElement = function() {
+        switch (this.options.listType) {
+            case 'unordered':
+                return 'ul';
+                break;
+            case 'ordered':
+                return 'ol';
+                break;
+            default:
+                return 'ol';
+                break;
+        };
+    };
+
     Quotes.createList = function() {
         var self = this,
             element = document.querySelector(self.options.selector);
 
-        var listElement = document.createElement('ul');
+        var listElement = document.createElement(Quotes.listElement());
+
+        listElement.className = self.options.listClass;
 
         element.appendChild(listElement);
 
@@ -56,11 +76,12 @@
             var li = document.createElement('li');
             li.innerHTML = value;
             li.style.display = 'none';
+            li.className = self.options.listItemClass;
             listElement.appendChild(li);
         });
         
         listElement.firstChild.style.display = 'block';
-        listElement.firstChild.className = 'active';
+        listElement.firstChild.className += ' ' + self.options.itemActiceClassName + ' active';
     };
 
     Quotes.play = function() {
@@ -70,9 +91,8 @@
 
         setInterval(function(){
             var active = listElement.querySelector('.active');
-
             active.style.display = 'none';
-            active.className = '';
+            active.className += active.className.replace(' active ' + self.options.itemActiceClassName, '');
 
             if (null === active.nextSibling)
                 next = listElement.firstChild;
@@ -80,7 +100,7 @@
                 next = active.nextSibling;
 
             next.style.display = 'block';
-            next.className = 'active';
+            next.className += ' active ' + self.options.itemActiceClassName;
 
         }, (this.options.sleep * 1000));
     };

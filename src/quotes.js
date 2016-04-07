@@ -9,9 +9,9 @@
             repeat: false,
             selector: '',
             listType: 'unordered',
-            listClass: '',
-            listItemClass: '',
-            itemActiceClassName: ''
+            listClass: 'quotes',
+            listItemClass: 'quote',
+            itemActiceClassName: 'active'
         },
         phrases: []
     };
@@ -80,8 +80,8 @@
             listElement.appendChild(li);
         });
         
-        listElement.firstChild.style.display = 'block';
-        listElement.firstChild.className += ' ' + self.options.itemActiceClassName + ' active';
+        listElement.firstChild.style.display = 'list-item';
+        listElement.firstChild.className += ' ' + self.options.itemActiceClassName;
     };
 
     Quotes.play = function() {
@@ -90,19 +90,25 @@
         var listElement = document.querySelector(self.options.selector).querySelector('ul');
 
         setInterval(function(){
-            var active = listElement.querySelector('.active');
+            var active = listElement.querySelector('.' + self.options.itemActiceClassName);
             active.style.display = 'none';
-            active.className += active.className.replace(' active ' + self.options.itemActiceClassName, '');
+            active.className = active.className.replace(self.options.itemActiceClassName, '');
 
             if (null === active.nextSibling)
                 next = listElement.firstChild;
             else
                 next = active.nextSibling;
 
-            next.style.display = 'block';
-            next.className += ' active ' + self.options.itemActiceClassName;
+            next.style.display = 'list-item';
+
+            next.className = self.trim(next.className);
+            next.className += ' ' + self.options.itemActiceClassName;
 
         }, (this.options.sleep * 1000));
+    };
+
+    Quotes.trim = function(str) {
+        return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
     };
 
     function merge(options, defaults) {

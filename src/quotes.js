@@ -56,26 +56,26 @@
             var li = document.createElement('li');
             li.innerHTML = value;
             li.style.display = 'none';
-            element.appendChild(li);
+            listElement.appendChild(li);
         });
         
-        element.firstChild.style.display = 'block';
-        element.firstChild.className = 'active';
+        listElement.firstChild.style.display = 'block';
+        listElement.firstChild.className = 'active';
     };
 
     Quotes.play = function() {
         var self = this;
 
-        var element = document.querySelector(self.options.selector).querySelector('ul');
+        var listElement = document.querySelector(self.options.selector).querySelector('ul');
 
         setInterval(function(){
-            var active = element.querySelector('.active');
+            var active = listElement.querySelector('.active');
 
             active.style.display = 'none';
             active.className = '';
 
             if (null === active.nextSibling)
-                next = element.firstChild;
+                next = listElement.firstChild;
             else
                 next = active.nextSibling;
 

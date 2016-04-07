@@ -48,6 +48,10 @@
         var self = this,
             element = document.querySelector(self.options.selector);
 
+        var listElement = document.createElement('ul');
+
+        element.appendChild(listElement);
+
         self.phrases.forEach(function(value){
             var li = document.createElement('li');
             li.innerHTML = value;
@@ -62,7 +66,7 @@
     Quotes.play = function() {
         var self = this;
 
-        var element = document.querySelector(self.options.selector);
+        var element = document.querySelector(self.options.selector).querySelector('ul');
 
         setInterval(function(){
             var active = element.querySelector('.active');

@@ -246,4 +246,5 @@ a {
 
 
 .list-quotes {
-  list-style-type: none; }
+  list-style-type: none;
+  display: inline; }

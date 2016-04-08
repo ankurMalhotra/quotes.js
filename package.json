@@ -1,20 +1,26 @@
 {
-    "name": "quotes.js",
-    "version": "1.0.0",
-    "description": "View a list of rotationally quotes",
-    "main": "src/quotes.js",
-    "keywords": [
-        "quotes",
-        "phrases"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/cauealves/quotes.js.git"
-    },
-    "author": "Cauê Alves",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/cauealves/quotes.js/issues"
-    },
-    "homepage": "https://github.com/cauealves/quotes.js#readme"
+  "name": "Quotes.js",
+  "version": "1.0.0",
+  "description": "View a list of rotationally quotes",
+  "main": "src/quotes.js",
+  "keywords": [
+    "quotes",
+    "phrases"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cauealves/quotes.js.git"
+  },
+  "author": "Cauê Alves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cauealves/quotes.js/issues"
+  },
+  "homepage": "https://github.com/cauealves/quotes.js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-header": "^1.7.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
 }

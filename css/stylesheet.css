@@ -59,13 +59,31 @@ a {
   background-color: #fff;
 }
 
+.signature {
+  padding: 1rem 2rem;
+}
+
+.signature a {
+  color: #159957;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.signature a:hover {
+  color: #008E47;
+}
+
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    padding: 5rem 6rem; 
+  }
+}
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
-    padding: 3rem 4rem; } }
+    padding: 3rem 4rem; 
+  }
+}
 
 @media screen and (max-width: 42em) {
   .page-header {
@@ -247,4 +265,5 @@ a {
 
 .list-quotes {
   list-style-type: none;
-  display: inline; }
+  display: inline; 
+}

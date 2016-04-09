@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <title>Quotes.js by Cauê Alves</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
   </head>
   <body>
+    <p class="signature">by <a href="http://github.com/cauealves"><span>@cauealves</span></a></p>
     <section class="page-header">
       <h1 class="project-name">Quotes.js</h1>
-      <h2 class="project-tagline"></h2>
       <div class="quotes"></div>
     </section>
-
     <section class="main-content">
+      <h3><span aria-hidden="true">Why using Quotes.js?</span></h3>
+      <p> Generally, we inspire us in some people in order to achieve certain goals. People who own mindsets where do you actually follow on. For life is based on micro moments where the quotes are present.
+      </p>
+      <p>Use this package to include in your website a few quotes that you enjoy.</p>
       <footer class="site-footer">
         <span class="site-footer-owner">
           <a href="https://github.com/cauealves/quotes.js">Quotes.js</a> is maintained with love.
@@ -25,17 +28,19 @@
     <script type="text/javascript" src="dist/quotes.min.js"></script>
     <script type="text/javascript">
       window.onload = function(){
-        Quotes.start([
+        var quotes = [
           'You never lose a dream. It just incubates as a hobby.',
           'Design is not just what it looks like and feels like. Design is how it works.',
           'Innovation distinguishes between a leader and a follower.',
           'Have enough courage to trust love one more time and always one more time.'
-        ],{
+        ];
+
+        Quotes.start(quotes, {
           selector: '.quotes',
           listType: 'unordered',
           listClass: 'list-quotes',
           sleep: 6
-        })
+        });
       };
     </script>
   </body>

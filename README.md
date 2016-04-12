@@ -4,17 +4,19 @@
   </a>
 </p>
 
+## Install 
 
-## Usage
+* Via `npm`
+```shell
+npm install quotes
+```
 
-Download the [minified](./dist/quotes.min.js?raw=true) and include it in your html.
-
+* Via [Download](./dist/quotes.min.js?raw=true)
 ```html
 <script type="text/javascript" src="js/quotes.min.js" async="async"></script>
 ```
 
-===
-
+## Usage
 
 **This code is a simple way that you can configure a list of quotes inside a selector specified.**
 

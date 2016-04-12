@@ -1,5 +1,5 @@
 {
-  "name": "Quotes.js",
+  "name": "quotesjs",
   "version": "1.0.0",
   "description": "View a list of rotationally quotes",
   "main": "src/quotes.js",

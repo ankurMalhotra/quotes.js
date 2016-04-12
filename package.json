@@ -1,6 +1,6 @@
 {
   "name": "quotesjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "View a list of rotationally quotes",
   "main": "src/quotes.js",
   "keywords": [

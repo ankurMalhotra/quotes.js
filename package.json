@@ -21,6 +21,7 @@
     "gulp": "^3.9.1",
     "gulp-header": "^1.7.1",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "nightwatch": "^0.8.18"
   }
 }

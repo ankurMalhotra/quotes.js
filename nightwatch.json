@@ -1,5 +1,6 @@
 {
   "src_folders" : ["tests"],
+  "live_output": false,
   "selenium" : {
     "start_process" : true,
     "server_path" : "./tests/server/selenium.jar",

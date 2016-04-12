@@ -8,8 +8,8 @@ node_js:
   - "4.1"
   - "4.0"
 
+sudo: required
 before_script:
   - npm install -g gulp
 
 script: npm test
-

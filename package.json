@@ -23,5 +23,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
     "nightwatch": "^0.8.18"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/nightwatch"
   }
 }

@@ -8,7 +8,7 @@
 
 * Via `npm`
 ```shell
-npm install quotes
+npm install quotesjs
 ```
 
 * Via [Download](./dist/quotes.min.js?raw=true)

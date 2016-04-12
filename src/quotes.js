@@ -1,7 +1,3 @@
-/*!
- * @author Cauê Alves https://github.com/cauealves
- */
-
 (function(window){
     var Quotes = {
         options: {

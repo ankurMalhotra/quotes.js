@@ -23,6 +23,14 @@
         "acceptSslCerts" : true,
         "phantomjs.binary.path" : "./tests/server/phantomjs"
       }
+    },
+    
+    "firefox" : {
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
     }
   }
 }

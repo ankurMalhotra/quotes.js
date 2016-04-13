@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cauealves/quotes.js.svg?branch=master)](https://travis-ci.org/cauealves/quotes.js)
+
 <p align="center">
   <a href="http://cauealves.github.io/quotes.js" target="_blank">
     <img src="./doc/quotes.gif">

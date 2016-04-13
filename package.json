@@ -1,6 +1,6 @@
 {
   "name": "quotesjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple way to include a list of quotes on your website",
   "main": "src/quotes.js",
   "keywords": [

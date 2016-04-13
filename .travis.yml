@@ -8,9 +8,9 @@ node_js:
   - "4.1"
   - "4.0"
 
-sudo: required
+sudo: false
 
 before_script:
-  - npm install -g gulp
+  - java -jar ${TRAVIS_BUILD_DIR}/tests/server/selenium.jar -port 4444 >/dev/null 2>&1 &
 
 script: npm test

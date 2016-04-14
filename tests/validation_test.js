@@ -1,7 +1,7 @@
 describe('DOM Tests', function () {
 	var element;
 	beforeEach(function(){
-		element = document.createElement('html');
+		element = document.createElement('div');
 		document.body.appendChild(element);
 	});
 	

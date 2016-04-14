@@ -18,15 +18,6 @@
       "screenshots" : {
         "enabled" : false
       },
-      "desiredCapabilities" : {
-        "browserName" : "phantomjs",
-        "javascriptEnabled" : true,
-        "acceptSslCerts" : true,
-        "phantomjs.binary.path" : "./tests/server/phantomjs"
-      }
-    },
-    
-    "firefox" : {
       "desiredCapabilities": {
         "browserName": "firefox",
         "javascriptEnabled": true,

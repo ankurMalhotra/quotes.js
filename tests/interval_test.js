@@ -5,7 +5,37 @@ module.exports = {
       .url('http://cauealves.github.io/quotes.js')
       .pause(1000);
 
-    client.expect.element('body').to.be.present;
+    var itemActiveClass = '.list-quotes li.active';
+
+    client.expect.element('.list-quotes').to.be.visible;
+    
+    client
+        .assert
+        .containsText(
+            itemActiveClass,
+            'You never lose a dream. It just incubates as a hobby.'
+    ).pause(6000);
+
+    client
+        .assert
+        .containsText(
+            itemActiveClass,
+            'Design is not just what it looks like and feels like. Design is how it works.'
+    ).pause(6000);
+
+    client
+        .assert
+        .containsText(
+            itemActiveClass,
+            'Innovation distinguishes between a leader and a follower.'
+    ).pause(6000);
+    
+    client
+        .assert
+        .containsText(
+            itemActiveClass,
+            'Have enough courage to trust love one more time and always one more time.'
+    ).pause(6000);
 
     client.end();
   }

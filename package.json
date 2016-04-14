@@ -31,10 +31,6 @@
     "phantomjs-prebuilt": "^2.1.7"
   },
   "scripts": {
-<<<<<<< HEAD
     "test": "nightwatch -e firefox && karma start --singlerun"
-=======
-    "test": "./node_modules/.bin/nightwatch"
->>>>>>> refs/remotes/cauealves/master
   }
 }

@@ -31,7 +31,6 @@
     "phantomjs-prebuilt": "^2.1.7"
   },
   "scripts": {
-    "test": "./node_modules/.bin/nightwatch -e firefox",
-	 "unit-test": "./node_modules/.bin/karma start --single run"
+    "test": "nightwatch -e firefox && karma start --singlerun"
   }
 }
